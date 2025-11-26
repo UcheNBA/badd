@@ -1,0 +1,249 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* anchor tags (links) - 18px */
+/* logo - 100px (width) */
+
+:root
+{
+    --btn-color: #1610c8;
+    --font-color: #ffffff;
+    --heading-font: "Poppins", san-serif;
+    --paragraph-font: "Poppins", san-serif;
+}
+
+body{
+    background-image: url('./img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: var(--heading-font);
+    /* ensure page content doesn't get hidden behind the fixed footer */
+    padding-bottom: 60px;
+}
+
+h1{
+    font-family: var(--heading-font);
+    font-size: 40px;
+}
+
+p{
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+}
+
+a{
+    font-size: 14px;
+}
+
+/* -----------navbar section -------------*/
+
+.navbar
+{
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar .nav-container
+{
+    max-width: 1000px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo a img{
+    width: 150PX;
+}
+
+.navbar .nav-link ul
+{
+    list-style: none;
+    display: flex;
+}
+
+.nav-link ul li{
+    margin: 0 8px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-link li a.active{
+    border-bottom: 1px solid #fff;
+}
+
+.nav-link li .link:hover{
+    border-bottom: 1px solid #fff;
+}
+
+.nav-link li .btn{
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: #1d4be4;
+}
+
+.toggle_btn{
+    display: none;
+    width: 25px; 
+}
+
+@media (max-width: 768px){
+    .navbar .nav-container{
+        width: 95%;
+    }
+
+    
+.navbar .nav-link
+{
+    display: none;
+}
+
+.toggle_btn{
+    display: flex;
+}
+
+}
+
+/* -----------banner section -------------*/
+.banner{
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:500px;
+    
+}
+
+.banner-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 1000px;
+    width: 80%;
+}
+
+.banner-item:first-child{
+    display: flex;
+    /*align-items: center;*/
+    justify-content: flex-start;
+}
+
+.banner-item .card{
+    background-color: #fff;
+    padding: 25px 35px;
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: 1s;
+}
+
+.banner-item .card:hover{
+    transform: scale(1.05);
+}
+.card > img{
+    width: 95px;
+    height: 95px;
+    border-radius: 100%;
+    object-position: center;
+}
+
+.socials a {
+    display: inline-block;
+    transition: 1s;
+}
+.socials a:hover{
+    transform: translatey(-7px);
+}
+
+.socials a img{
+    width: 45px;
+}
+
+.banner-item:last-child{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.banner-item:last-child .banner-link .btn{
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: #3b23a8;
+    margin-top: 10px;
+}
+
+.banner-item:last-child .banner-link
+{
+    display:flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}       
+
+.banner-item:last-child .banner-link a{
+    display: block;
+}
+
+.banner-link a.btn-alt{
+    padding: 8px 12px;
+    border-radius: 15PX;
+    border: 1px solid #ffffff;
+    margin-top: 10px;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #110404;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 0;
+    color: #fff;
+    z-index: 1000;
+}
+
+@media (max-width: 768px){
+
+     .banner{
+        height: fit-content;
+    }
+
+    .banner-container{
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+   
+
+.banner-item:first-child
+{
+    justify-content: center;
+}
+
+.banner-item:last-child{
+    text-align: center;
+}
+
+.banner-item:last-child .banner-link{
+    justify-content: center;
+}
+}
+
